@@ -22,7 +22,7 @@ jobs:
 
       - name: Scripti Çalıştır
         env:
-          GÖNDEREN_EMAIL: ${{ secrets.GÖNDEREN_EMAIL }}
+          GONDEREN_EMAIL: ${{ secrets.GONDEREN_EMAIL }}
           ALICI_EMAIL: ${{ secrets.ALICI_EMAIL }}
           EMAIL_SIFRESI: ${{ secrets.EMAIL_SIFRESI }}
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
