@@ -1,6 +1,5 @@
 import requests
 import time
-import schedule
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -126,6 +125,3 @@ schedule.every(1).hours.do(bilet_sorgula)
 if __name__ == "__main__":
     print("Email tabanlı TCDD alarmı aktif.")
     bilet_sorgula() # İlk kontrol
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
