@@ -119,8 +119,6 @@ def bilet_sorgula():
         print(f"DEBUG: Sistem hatası maili gönderildi: {e}")
         
 
-# Planlama: Saatte bir çalıştır
-schedule.every(1).hours.do(bilet_sorgula)
 
 if __name__ == "__main__":
     print("Email tabanlı TCDD alarmı aktif.")
