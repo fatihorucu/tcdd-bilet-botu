@@ -1,0 +1,30 @@
+name: TCDD Bilet Kontrolü
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Her saat başında çalışır
+  workflow_dispatch:     # Manuel çalıştırma butonu ekler
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kodu çek
+        uses: actions/checkout@v4
+
+      - name: Python Kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Kütüphaneleri Yükle
+        run: pip install -r requirements.txt
+
+      - name: Scripti Çalıştır
+        env:
+          GÖNDEREN_EMAIL: ${{ secrets.GÖNDEREN_EMAIL }}
+          ALICI_EMAIL: ${{ secrets.ALICI_EMAIL }}
+          EMAIL_SIFRESI: ${{ secrets.EMAIL_SIFRESI }}
+          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          USER_AUTH_TOKEN: ${{ secrets.USER_AUTH_TOKEN }}
+        run: python app.py
