@@ -40,7 +40,7 @@ PAYLOAD = {
             "departureStationName": "ANKARA GAR",
             "arrivalStationId": 532,
             "arrivalStationName": "KARS",
-            "departureDate": "23-03-2026 21:00:00"
+            "departureDate": "24-03-2026 21:00:00"
         }
     ]
 }
