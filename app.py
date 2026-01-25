@@ -122,4 +122,4 @@ def bilet_sorgula():
 
 if __name__ == "__main__":
     print("Email tabanlı TCDD alarmı aktif.")
-    bilet_sorgula() # İlk kontrol
+    # bilet_sorgula() # İlk kontrol
